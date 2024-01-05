@@ -12,8 +12,8 @@ Version 16
 > [!TIP]
 > Programar en C puede ser aburrido cuando uno no tiene acceso a las funciones comunes
 > más utilizadas. 
->Este proyecto te permitirá entender la forma en la que estas funciones funcionan, cómo implementarlas y aprender a utilizarlas. Crearás una librería propia, que será muy útil ya que la utilizarás en los siguientes proyectos de C.
-> Asegúrate de ir enriqueciendo tu libft a lo largo de tu cursus. Sin embargo, cuando utilices tu librería asegúrate de que todas las funciones utilizadas por tu librería respetan las permitidas por cada proyecto.
+- Este proyecto te permitirá entender la forma en la que estas funciones funcionan, cómo implementarlas y aprender a utilizarlas. Crearás una librería propia, que será muy útil ya que la utilizarás en los siguientes proyectos de C.
+-  Asegúrate de ir enriqueciendo tu libft a lo largo de tu cursus. Sin embargo, cuando utilices tu librería asegúrate de que todas las funciones utilizadas por tu librería respetan las permitidas por cada proyecto.
 
 > [!IMPORTANT]
 > Instrucciones generales
@@ -30,11 +30,11 @@ Version 16
 
 > [!CAUTION]
 > Consideraciones técnicas
-> Declarar variables globales está prohibido
-> Si necesitas separar una función compleja en varias, asegurate de utilizar la palabra static para ello. De esta forma, las funciones se quedarán en el archivo apropiado
-> Pon todos tus archivos en la raíz de tu repositorio
-> Se prohibe entregar archivos no utilizados
-> Todos los archivos .c deben compilarse con las flags -Wall -Werror Wextra
-> Debes utilizar el comando ar para generar la librería. El uso de libtool queda prohibido
-> Tu libft.a tiene que ser creado en la raíz del repositorio
+- Declarar variables globales está prohibido
+- Si necesitas separar una función compleja en varias, asegurate de utilizar la palabra static para ello. De esta forma, las funciones se quedarán en el archivo apropiado
+- Pon todos tus archivos en la raíz de tu repositorio
+- Se prohibe entregar archivos no utilizados
+- Todos los archivos .c deben compilarse con las flags -Wall -Werror Wextra
+- Debes utilizar el comando ar para generar la librería. El uso de libtool queda prohibido
+- Tu libft.a tiene que ser creado en la raíz del repositorio
 
