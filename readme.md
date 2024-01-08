@@ -41,25 +41,25 @@ Version 16
 > [!TIP]
 > Para ejecutar el Makefile en la terminal, debes usar el comando make seguido de la regla que deseas ejecutar. Si no se especifica, se ejecutará la primara regla en el Makefile, en nuestro caso es all.
 
->Para compilar el programa 
+> Para compilar el programa 
 ```
 make
 ```
 
->> Para eliminar todos los archivos objeto
+> Para eliminar todos los archivos objeto
 ```
 make clean
 ```
 
->> Para eliminar todos los archivos objeto y el archivo de la biblioteca
+> Para eliminar todos los archivos objeto y el archivo de la biblioteca
 ```
 make fclean
 ```
 
->> Para recompilar todo desde cero
+> Para recompilar todo desde cero
 ```
 make re
 ```
 
->> [!TIP]
->> Asegúrate de estar en el mismo directorio que tu Makefile cuando ejecutes estos comandos.
+> [!TIP]
+> Asegúrate de estar en el mismo directorio que tu Makefile cuando ejecutes estos comandos.
