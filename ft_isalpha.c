@@ -8,3 +8,13 @@ int ft_isalpha(int c)
     else
         return (0); // else return 0
 }
+/*
+#include <stdio.h>
+
+int main()
+{
+    char c = 'a';
+    printf("%d", ft_isalpha(c));
+    return (0);
+}
+*/
