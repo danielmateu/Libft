@@ -19,12 +19,14 @@ CC = gcc
 OBJ = $(SRC:.c=.o) 
 
 # Regla por defecto
-all: $(NAME) 
+all: $(NAME)
 
 # Regla para crear la biblioteca
 $(NAME): $(OBJ) 
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+# ar rc crea la biblioteca
+# ranlib crea el indice de la biblioteca
 
 # Regla para crear los archivos objeto. El % es un operador de sustitucion de patron. A partir de un archivo .c se crea un archivo .o
 # $< es el primer archivo de la lista de dependencias y $@ es el archivo objetivo
@@ -40,10 +42,11 @@ fclean: clean
 	rm -f $(NAME)
 
 # Regla para recompilar todo
-re: fclean all 
+re: fclean all make -C . -j
 
 # Regla para compilar solo los archivos modificados
-recompile: 
-	make -C . -j
+# recompile: 
+# 	make -C . -j
+
 # Reglas que no son archivos
 .PHONY: all clean fclean re 

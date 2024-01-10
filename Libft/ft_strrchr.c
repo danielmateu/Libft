@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 13:50:30 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/10 15:26:50 by damateu-         ###   ########.fr       */
+/*   Created: 2024/01/10 15:21:58 by damateu-          #+#    #+#             */
+/*   Updated: 2024/01/10 15:26:25 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(const char *str)
+char *ft_strrchr(const char *s, int c)
 {
     int i;
 
-    i = 0;
-    while (str[i] != '\0')
-        i++;
-    return (i);
+    i = ft_strlen(s);
+    while (i >= 0)
+    {
+        if (s[i] == c)
+            return ((char *)&s[i]);
+        i--;
+    }
+    return (NULL);
+}
+
+int main(void){
+    char *str = "Hello World";
+    char *ptr;
+
+    ptr = ft_strrchr(str, 'l');
+    printf("The string after 'l' is: %s\n", ptr);
+    return (0);
 }

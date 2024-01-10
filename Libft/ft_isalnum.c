@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:50:57 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/10 13:32:57 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/10 14:27:11 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int ft_isalnum(int c)
         (c >= 'A' && c <= 'Z') ||
         (c >= 'a' && c <= 'z'))
     {
+        //printf("The character is alphanumeric\n");
         return (1); // return 1
     }
     else
