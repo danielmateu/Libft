@@ -26,9 +26,12 @@ $(NAME): $(OBJ)
 # Regla para crear los archivos objeto
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+
 # Regla para borrar los archivos objeto
 clean: 
 	rm -f $(OBJ)
+
 # Regla para borrar los archivos objeto y la biblioteca
 fclean: clean 
 	rm -f $(NAME)
@@ -36,5 +39,8 @@ fclean: clean
 # Regla para recompilar todo
 re: fclean all 
 
+# Regla para compilar solo los archivos modificados
+recompile: 
+	make -C . -j
 # Reglas que no son archivos
 .PHONY: all clean fclean re 
