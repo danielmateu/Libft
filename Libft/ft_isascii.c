@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascci.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:50:47 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/09 15:52:24 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/10 13:19:56 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int ft_isascii(int c)
 }
 
 // Test main
+/*
 int main(void)
 {
     int c;
@@ -33,3 +34,4 @@ int main(void)
         printf("The character is not an ASCII character\n");
     return (0);
 }
+*/
