@@ -63,3 +63,9 @@ make re
 
 > [!TIP]
 > Asegúrate de estar en el mismo directorio que tu Makefile cuando ejecutes estos comandos.
+
+> [!IMPORTANT]
+> # Para correr C Formatter
+
+1. c_formatter_42 < file.c
+2. python3 -m c_formatter_42 < file.c  # If you get 'command not found' with the previous one
