@@ -1,23 +1,30 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/10 10:53:47 by damateu-          #+#    #+#             */
+/*   Updated: 2024/01/10 10:58:56 by damateu-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef LIBFT_H
+#define LIBFT_H
 
-# define LIBFT_H
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
+int ft_isalpha(int c);
+int ft_isalnum(int c);
+int ft_isdigit(int c);
+int ft_strlen(char *str);
+int ft_isascci(int c);
+int ft_isprint(int c);
+int ft_toupper(int c);
+int ft_tolower(int c);
+char *fr_strchr(const char *s, int c);
 
-// Part 1 - Libft functions
-// isalpha
-int		ft_isalpha(int c);
-// isdigit
-int		ft_isdigit(int c);
-// isalnum
-int		ft_isalnum(int c);
-// isascii
-int		ft_isascii(int c);
-// isprint
-int		ft_isprint(int c);
-
-# endif
+#endif
