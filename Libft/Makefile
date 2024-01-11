@@ -1,51 +1,47 @@
-# Nombre del archivo de la biblioteca
-NAME = libft.a 
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: damateu- <damateu-@student.42barcel>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/01/09 11:40:17 by damateu-          #+#    #+#              #
+#    Updated: 2024/01/11 17:31:19 by damateu-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-# Archivo de cabecera
-INCL = libft.h 
+NAME = libft.a
 
-# Flags del complilador
-CFLAGS = -Wall -Wextra -Werror 
+INCL = libft.h
+# Flags del compilador
+CFLAGS = -Wall -Wextra -Werror
+SRC = ft_isalpha.c ft_isalnum.c ft_isdigit.c ft_isascii.c ft_isprint.c ft_strlen.c ft_toupper.c ft_tolower.c ft_strchr.c ft_memset.c ft_strncmp.c
+#SRC = $(wildcard ft_*.c)
 
-# SRC = ft_isalpha.c ft_isalnum.c ft_isdigit.c ft_isascii.c ft_isprint.c ft_strlen.c ft_toupper.c ft_tolower.c ft_strchr.c
-# incluir en SRC los archivos .c que se quieran compilar que empiecen con ft_
-SRC = $(wildcard ft_*.c)
-# wildcard es una funcion que busca todos los archivos que empiecen con ft_ y terminen con .c
-
-# Comando para compilar
-CC = gcc 
+CC = gcc
 
 # Archivos objeto
-OBJ = $(SRC:.c=.o) 
+OBJ = $(SRC:.c=.o)
 
 # Regla por defecto
 all: $(NAME)
 
 # Regla para crear la biblioteca
-$(NAME): $(OBJ) 
+$(NAME):$(OBJ)
 	ar rc $(NAME) $(OBJ)
-# ar rc crea la biblioteca
-# ranlib crea el indice de la biblioteca
 
-# Regla para crear los archivos objeto. El % es un operador de sustitucion de patron. A partir de un archivo .c se crea un archivo .o
-# $< es el primer archivo de la lista de dependencias y $@ es el archivo objetivo
+# Regla para crear archivos objeto
 %.o : %.c
 	$(CC) $(CFLAGS) -c $<
 
-# Regla para borrar los archivos objeto
-clean: 
+# Regla para eliminar los archivos objeto
+clean:
 	rm -f $(OBJ)
 
-# Regla para borrar los archivos objeto y la biblioteca
-fclean: clean 
+# Regla para borrar archivos objeto y la biblioteca
+fclean: clean
 	rm -f $(NAME)
+# Regla para recompliar todo
+re: fclean all
 
-# Regla para recompilar todo
-re: fclean all make -C . -j
-
-# Regla para compilar solo los archivos modificados
-# recompile: 
-# 	make -C . -j
-
-# Reglas que no son archivos
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re

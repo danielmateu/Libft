@@ -1,4 +1,0 @@
-#objetivo: dependencias
-#	instrucciones
-
-# Variables

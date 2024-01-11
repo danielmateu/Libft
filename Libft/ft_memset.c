@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_meset.c                                         :+:      :+:    :+:   */
+/*   memset.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: damateu- <damateu-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 16:22:42 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/11 16:23:11 by damateu-         ###   ########.fr       */
+/*   Created: 2024/01/11 16:13:12 by damateu-          #+#    #+#             */
+/*   Updated: 2024/01/11 17:36:31 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,19 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-    unsigned char	*str;
+	unsigned char	*str;
 
-    str = (unsigned char *)b;
-    while (len--)
-        *str++ = (unsigned char)c;
-    return (b);
+	str = (unsigned char *)b;
+	while (len--)
+		*str++ = (unsigned char)c;
+	return (b);
 }
+/*
+int main()
+{
+	char str[] = "Hello world!";
+	ft_memset (str, '-', 3);
+	puts (str);
+	return 0;
+}
+*/
