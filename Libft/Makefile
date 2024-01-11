@@ -24,14 +24,13 @@ all: $(NAME)
 # Regla para crear la biblioteca
 $(NAME): $(OBJ) 
 	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
 # ar rc crea la biblioteca
 # ranlib crea el indice de la biblioteca
 
 # Regla para crear los archivos objeto. El % es un operador de sustitucion de patron. A partir de un archivo .c se crea un archivo .o
 # $< es el primer archivo de la lista de dependencias y $@ es el archivo objetivo
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ 
+%.o : %.c
+	$(CC) $(CFLAGS) -c $<
 
 # Regla para borrar los archivos objeto
 clean: 
