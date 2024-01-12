@@ -12,13 +12,12 @@ void    ft_bzero(void *s, size_t n)
     while (n--)
         *str++ = 0;
 }
-/*
+
 int main()
 {
     char str[] = "Hello world!";
-    ft_bzero (str, 3);
+    ft_bzero (str, 0);
     // puts -> imprime el string
     puts (str);
     return 0;
 }
-*/
