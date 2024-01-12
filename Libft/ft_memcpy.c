@@ -6,9 +6,11 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:10:20 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/12 13:48:30 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/12 13:49:49 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
