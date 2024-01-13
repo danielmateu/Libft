@@ -33,3 +33,12 @@ void	*ft_memmove(void *dst, void const *src, size_t n)
     }
     return (dst);
 }
+
+int main()
+{
+    char src[] = "GeeksForGeeks";
+    char dest[] = "GeeksForGeeks";
+    ft_memmove(dest + 5, dest, strlen(dest) + 1);
+    printf("Resultado: %s", dest);
+    return 0;
+}
