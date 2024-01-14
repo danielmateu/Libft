@@ -1,14 +1,14 @@
 #include "libft.h"
 #include <stddef.h>
 
-int	ft_strlen(const char *str)
+int ft_strlen(const char *str)
 {
-	int	i;
+    int i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+    i = 0;
+    while (str[i] != '\0')
+        i++;
+    return (i);
 }
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
@@ -36,9 +36,11 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
     return (dst_len + src_len);
 }
 
-int main(void){
+int main(void)
+{
     char *src = "Hello";
-    char dst[10] = "World";
-    printf("%zu\n", ft_strlcat(dst, src, 10));
+    char dst[11] = "World";
+    printf("%zu\n", ft_strlcat(dst, src, 11));
     printf("%s\n", dst);
-    return (0);}
+    return (0);
+}
