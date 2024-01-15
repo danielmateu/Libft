@@ -69,3 +69,5 @@ make re
 
 1. c_formatter_42 < file.c
 2. python3 -m c_formatter_42 < file.c  # If you get 'command not found' with the previous one
+
+
