@@ -62,6 +62,13 @@ make re
 ```
 
 > [!TIP]
+> Para compilar coddigo fuente con dependencias de otras funcines:
+```
+gcc -o output codigo_fuente.c dependencia1.c dependencia2.c
+```
+
+
+> [!TIP]
 > Asegúrate de estar en el mismo directorio que tu Makefile cuando ejecutes estos comandos.
 
 > [!IMPORTANT]
