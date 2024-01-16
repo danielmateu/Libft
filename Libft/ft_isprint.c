@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: damateu- <damateu-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:34:32 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/10 10:35:56 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:53:05 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,12 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
+
+/*
+int main()
+{
+	char c = 'a';
+	printf("%d", ft_isprint(c));
+	return (0);
+}
+*/

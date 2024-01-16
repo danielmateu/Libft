@@ -12,7 +12,7 @@ void    ft_bzero(void *s, size_t n)
     while (n--)
         *str++ = 0;
 }
-
+/*
 int main()
 {
     char str[] = "Hello world!";
@@ -21,3 +21,4 @@ int main()
     puts (str);
     return 0;
 }
+*/

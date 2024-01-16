@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
+/*
 int main(void)
 {
     // Test para comprobar uso de ft_strnstr
@@ -29,3 +29,4 @@ int main(void)
     char str2[] = "llo";
     printf("Test1: %s\n", ft_strnstr(str1, str2, 11));
 }
+*/

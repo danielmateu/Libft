@@ -17,7 +17,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
             return (str1[i] - str2[i]);
     return (0);
 }
-
+/*
 int main(void)
 {
     // Test1
@@ -25,3 +25,4 @@ int main(void)
     char str2[] = "Hello";
     printf("Test1: %d\n", ft_memcmp(str1, str2, 11));
 }
+*/

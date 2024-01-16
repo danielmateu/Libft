@@ -15,7 +15,7 @@ void *ft_memchr(const void *s, int c, size_t n)
     }
     return (NULL);
 }
-
+/*
 int main(void)
 {
     char str[] = "Hello World";
@@ -24,3 +24,4 @@ int main(void)
     printf("%s\n", ptr);
     return (0);
 }
+*/

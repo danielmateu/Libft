@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: damateu- <damateu-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 12:16:48 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/10 14:47:12 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:52:26 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,12 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
+
+/*
+int main()
+{
+	char c = 'a';
+	printf("%d", ft_isalpha(c));
+	return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 14:07:28 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/16 12:18:09 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:55:57 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,12 @@ int	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+
+/*
+int main()
+{
+	char *str = "Hello";
+	printf("%d", ft_strlen(str));
+	return (0);
+}
+*/

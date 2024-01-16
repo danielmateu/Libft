@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: damateu- <damateu-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:14:47 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/09 15:19:14 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:52:07 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,12 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+
+/*
+	int main()
+	{
+		char c = 'a';
+		printf("%d", ft_isalnum(c));
+		return (0);
+	}
+*/

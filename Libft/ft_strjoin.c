@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:43:09 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/16 13:47:47 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:55:00 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,3 +46,13 @@ char *ft_strjoin(char const *s1, char const *s2)
     str[i + j] = '\0';
     return (str);
 }
+
+/*
+int main()
+{
+    char *s1 = "Hello";
+    char *s2 = "World";
+    printf("%s", ft_strjoin(s1, s2));
+    return (0);
+}
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: damateu- <damateu-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 14:24:24 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/09 16:40:34 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:57:07 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(void)
 	char c;
 
 	c = 'a';
-	printf("%c", ft_touper(c));
+	printf("%c", ft_toupper(c));
 	return (0);
 }
 */

@@ -23,7 +23,7 @@ int ft_atoi(const char *nptr)
     }
     return (res * sign);
 }
-
+/*
 int main(void)
 {
     // Test para comprobar uso de ft_atoi
@@ -38,3 +38,4 @@ int main(void)
     char str3[] = "abceder";
     printf("Test3: %d\n", atoi(str3));
 }
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: damateu- <damateu-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:30:49 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/10 10:32:58 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:52:51 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,12 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
+
+/*
+int main()
+{
+	char c = 'a';
+	printf("%d", ft_isdigit(c));
+	return (0);
+}
+*/

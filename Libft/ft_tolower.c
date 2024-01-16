@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: damateu- <damateu-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:43:42 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/09 16:37:19 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:56:56 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,12 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
+
+/*
+int main(){
+	char c = 'A';
+	printf("%c", ft_tolower(c));
+	return (0);
+}
+
+*/
