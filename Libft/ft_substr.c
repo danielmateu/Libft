@@ -6,35 +6,48 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:19:37 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/15 17:28:17 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/16 12:38:53 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+    Parameters:
+        #1. s: The string from which to create the substring.
+        #2. start: The start index of the substring in the string ’s’.
+        #3. len: The maximum length of the substring.
+    Return value:
+        The substring. NULL if the allocation fails.
+    External functions:
+        malloc
+    Description:
+        Allocates (with malloc(3)) and returns a substring from the string ’s’.
+        The substring begins at index ’start’ and is of maximum size ’len’.
+*/
+
 char *ft_substr(char const *s, unsigned int start, size_t len){
+
     char *str;
     size_t i;
 
     i = 0;
     if (!s)
         return (NULL);
-    // Can't use ft_strlen because it's not allowed
-    while (s[i])
+    if (start > ft_strlen(s))
+        return (strdup(""));
+    str = (char *)malloc(sizeof(char) * (len + 1));
+    if (!str)
+        return (NULL);
+    while (i < len && s[start + i])
+    {
+        str[i] = s[start + i];
         i++;
-
-    if (start > i)
-        //return (ft_strdup(""));
-        // cant use ft_strdup because it's not allowed
-        return (NULL);
-    if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
-        return (NULL);
-    while (i < len && s[start])
-        str[i++] = s[start++];
+    }
     str[i] = '\0';
     return (str);
 }
-
+/*
 int main(void){
     // Test 1
     char str[] = "Hello World";
@@ -48,3 +61,4 @@ int main(void){
     char str3[] = "Hello World";
     printf("Test3: %s\n", ft_substr(str3, 6, 7));
 }
+*/
