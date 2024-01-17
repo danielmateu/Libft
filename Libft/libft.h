@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:41:23 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/17 12:35:42 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/17 13:07:58 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ char    *ft_strdup(const char *s1);
 
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
+char **ft_split(char const *s, char c);
 
 #endif
