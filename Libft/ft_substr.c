@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:19:37 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/16 12:38:53 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:13:08 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len){
     i = 0;
     if (!s)
         return (NULL);
-    if (start > ft_strlen(s))
+    if (start > (unsigned int)ft_strlen(s))
         return (strdup(""));
     str = (char *)malloc(sizeof(char) * (len + 1));
     if (!str)

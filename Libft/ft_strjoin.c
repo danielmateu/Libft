@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:43:09 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/16 16:52:46 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:07:54 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 
 #include "libft.h"
-
+/*
 int ft_strlen(const char *str)
 {
     size_t len = 0;
@@ -27,6 +27,7 @@ int ft_strlen(const char *str)
         len++;
     return len;
 }
+*/
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
@@ -55,7 +56,7 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (str);
 }
 
-
+/*
 int main()
 {
     char *s1 = "Hello ";
@@ -63,4 +64,5 @@ int main()
     printf("%s", ft_strjoin(s1, s2));
     return (0);
 }
+*/
 
