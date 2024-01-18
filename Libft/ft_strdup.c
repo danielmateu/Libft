@@ -46,7 +46,7 @@ char    *ft_strdup(const char *s1)
     s2[i] = '\0';
     return (s2);
 }
-
+/*
 int main()
 {
     char *s1 = "Hola";
@@ -54,3 +54,4 @@ int main()
     printf("%s\n", s2);
     return (0);
 }
+*/

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 /*
     Definicion: Separa una cadena de caracteres en un array de cadenas de caracteres.
@@ -26,42 +27,55 @@ int count_words(char const *s, char c)
     int i = 0;
     int count = 0;
 
-    while (s[i])
+    while (s[i] != '\0')
     {
-        if (s[i] == c)
+        while (s[i] == c)
+            i++;
+        if (s[i] != '\0')
+        {
             count++;
-        i++;
+            while (s[i] != '\0' && s[i] != c)
+                i++;
+        }
     }
-    return (count + 1);
+    return (count);
 }
 
 char **ft_split(char const *s, char c)
 {
     char **strs;
-    int i;
-    int j;
-    int k;
-    int word_len;
+    int i, j, k, word_len;
 
-    i = 0;
-    j = 0;
-    k = 0;
-    strs = (char **)malloc(sizeof(char *) * count_words(s, c));
+    size_t word_count = count_words(s, c);
+    strs = (char **)malloc(sizeof(char *) * (word_count + 1));
     if (!strs)
         return (NULL);
 
-    while (s[i])
+    i = 0;
+    j = 0;
+    while (s[i] != '\0')
     {
+        while (s[i] == c)
+            i++;
+        if (s[i] == '\0')
+            break;
         word_len = 0;
-        while (s[i + word_len] && s[i + word_len] != c)
+        while (s[i + word_len] != '\0' && s[i + word_len] != c)
             word_len++;
-        strs[j] = (char *)malloc(sizeof(char) * (word_len + 1)); // Allocate memory for strs[j], not strs
+        strs[j] = (char *)malloc(sizeof(char) * (word_len + 1));
         if (!strs[j])
             return (NULL);
+        k = 0;
+        while (k < word_len)
+        {
+            strs[j][k] = s[i + k];
+            k++;
+        }
+        strs[j][k] = '\0';
         i += word_len;
         j++;
     }
-    strs[j][k] = '\0';
+    strs[j] = '\0';
     return (strs);
 }
 
