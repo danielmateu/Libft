@@ -6,36 +6,36 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:10:20 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/16 13:53:58 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/18 18:29:31 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    if (dst == 0 && src == 0)
-        return (NULL);
-    while (i < n)
-    {
-        ((char *)dst)[i] = ((char *)src)[i];
-        i++;
-    }
-    return (dst);
+	i = 0;
+	if (dst == 0 && src == 0)
+		return (NULL);
+	while (i < n)
+	{
+		((char *)dst)[i] = ((char *)src)[i];
+		i++;
+	}
+	return (dst);
 }
 /*
-30 int main(void)
-31 {
-32     char src[] = "Good Bye";
-33     char dst[] = "Hello world";
-34
-35     printf("Antes de llamar la funcion, dest = %s\n", dst);
-36     ft_memcpy(dst, src, 9);
-37     printf("Despues de llamar la funcion, dest = %s\n", dst);
-38
-39     return (0);
-40 }
-41 */
+int	main(void)
+{
+	char src[] = "Good Bye";
+	char dst[] = "Hello world";
+
+	printf("Antes de llamar la funcion, dest = %s\n", dst);
+	ft_memcpy(dst, src, 9);
+	printf("Despues de llamar la funcion, dest = %s\n", dst);
+
+	return (0);
+}
+*/

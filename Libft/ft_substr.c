@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:19:37 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/18 17:54:27 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/18 18:10:08 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,37 +36,40 @@ int	ft_strlen(const char *str)
     return (i);
 }
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char *allocate_and_fill(const char *s, size_t start, size_t len)
 {
     char *str;
-    size_t i;
+    size_t i = 0;
 
-    i = 0;
-    if (!s)
-        return (NULL);
-    size_t str_len = ft_strlen(s);
-    if (start > str_len)
-    {
-        str = (char *)malloc(sizeof(char) * 1);
-        if (!str){
-            return (NULL);
-        }
-        str[0] = '\0';
-        return (str); 
-    }
-    size_t substr_len = str_len - start;
-    if (len > substr_len)
-        len = substr_len;
     str = (char *)malloc(sizeof(char) * (len + 1));
     if (!str)
         return (NULL);
-    while (i < len && s[start + i] && s[start + i] != '\0')
+    while (i < len && s[start + i])
     {
         str[i] = s[start + i];
         i++;
     }
     str[i] = '\0';
     return (str);
+}
+
+char *ft_substr(char const *s, unsigned int start, size_t len)
+{
+    if (!s)
+        return (NULL);
+    size_t str_len = ft_strlen(s);
+    if (start > str_len)
+    {
+        char *str = (char *)malloc(sizeof(char));
+        if (!str)
+            return (NULL);
+        str[0] = '\0';
+        return (str); 
+    }
+    size_t substr_len = str_len - start;
+    if (len > substr_len)
+        len = substr_len;
+    return allocate_and_fill(s, start, len);
 }
 /*
 int main(void){
