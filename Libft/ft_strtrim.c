@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:08:52 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/16 17:26:13 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/18 17:41:13 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char *ft_strtrim(char const *s1, char const *set)
     str[k] = '\0';
     return (str);
 }
-
+/*
 int main()
 {
     char *s1;
@@ -59,3 +59,4 @@ int main()
     printf("%s", ft_strtrim(s1, set));
     return (0);
 }
+*/

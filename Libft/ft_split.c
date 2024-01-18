@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:05:56 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/18 16:02:27 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/18 16:08:14 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,23 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
+// my_strncpy
+char *my_strncpy(char * dst, const char * src, size_t len)
+{
+    size_t i;
+
+    i = 0;
+    while (i < len && src[i])
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    while (i < len)
+        dst[i++] = '\0';
+    return (dst);
+}
+
+
 char	*allocate_word(const char *s, int word_len)
 {
 	char	*word;
@@ -40,7 +57,7 @@ char	*allocate_word(const char *s, int word_len)
 	word = (char *)malloc(sizeof(char) * (word_len + 1));
 	if (!word)
 		return (NULL);
-	strncpy(word, s, word_len);
+	my_strncpy(word, s, word_len);
 	word[word_len] = '\0';
 	return (word);
 }

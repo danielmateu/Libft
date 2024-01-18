@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:41:23 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/17 13:07:58 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/18 17:40:27 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int     ft_toupper(int c);
 int     ft_tolower(int c);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
+char    *ft_strtrim(char const *s1, char const *set);
 void    *ft_memset(void *b, int c, size_t len);
 void    *ft_memmove(void *dst, void const *src, size_t n);
 int     ft_strncmp(const char *str, const char *str2, size_t n);

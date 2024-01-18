@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:19:37 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/17 12:13:08 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/18 17:54:27 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,41 @@
         The substring begins at index ’start’ and is of maximum size ’len’.
 */
 
-char *ft_substr(char const *s, unsigned int start, size_t len){
+int	ft_strlen(const char *str)
+{
+    unsigned int	i;
 
+    i = 0;
+    while (str[i] != '\0')
+        i++;
+    return (i);
+}
+
+char *ft_substr(char const *s, unsigned int start, size_t len)
+{
     char *str;
     size_t i;
 
     i = 0;
     if (!s)
         return (NULL);
-    if (start > (unsigned int)ft_strlen(s))
-        return (strdup(""));
+    size_t str_len = ft_strlen(s);
+    if (start > str_len)
+    {
+        str = (char *)malloc(sizeof(char) * 1);
+        if (!str){
+            return (NULL);
+        }
+        str[0] = '\0';
+        return (str); 
+    }
+    size_t substr_len = str_len - start;
+    if (len > substr_len)
+        len = substr_len;
     str = (char *)malloc(sizeof(char) * (len + 1));
     if (!str)
         return (NULL);
-    while (i < len && s[start + i])
+    while (i < len && s[start + i] && s[start + i] != '\0')
     {
         str[i] = s[start + i];
         i++;
