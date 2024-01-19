@@ -1,15 +1,15 @@
 #include "libft.h"
 #include <stddef.h>
 
-int ft_strlen(const char *str)
-{
-    int i;
+// int ft_strlen(const char *str)
+// {
+//     int i;
 
-    i = 0;
-    while (str[i] != '\0')
-        i++;
-    return (i);
-}
+//     i = 0;
+//     while (str[i] != '\0')
+//         i++;
+//     return (i);
+// }
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {

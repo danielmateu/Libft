@@ -26,15 +26,15 @@
         The substring begins at index ’start’ and is of maximum size ’len’.
 */
 
-int	ft_strlen(const char *str)
-{
-    unsigned int	i;
+// int	ft_strlen(const char *str)
+// {
+//     unsigned int	i;
 
-    i = 0;
-    while (str[i] != '\0')
-        i++;
-    return (i);
-}
+//     i = 0;
+//     while (str[i] != '\0')
+//         i++;
+//     return (i);
+// }
 
 char *allocate_and_fill(const char *s, size_t start, size_t len)
 {

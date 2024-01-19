@@ -35,10 +35,11 @@ char    *ft_itoa(int n)
         str[0] = '-';
     return (str);
 }
-
+/*
 int main(void)
 {
     int n = -2147483648;
     printf("%s\n", ft_itoa(n));
     return (0);
 }
+*/
