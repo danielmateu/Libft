@@ -1,6 +1,6 @@
 #include "libft.h"
 /*
-** Allocates (with malloc(3)) and returns a string representing the integer received as an argument.
+** Definicion: Reserva memoria (con malloc(3)) y devuelve la cadena de caracteres representando el entero recibido como argumento. Los números negativos deben ser manejados.
 ** Negative numbers must be handled.
 ** Return value: The string representing the integer. NULL if the allocation fails.
 
@@ -34,4 +34,11 @@ char    *ft_itoa(int n)
     if (sign == -1)
         str[0] = '-';
     return (str);
+}
+
+int main(void)
+{
+    int n = -2147483648;
+    printf("%s\n", ft_itoa(n));
+    return (0);
 }
