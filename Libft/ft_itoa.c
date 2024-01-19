@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/16 13:24:50 by damateu-          #+#    #+#             */
+/*   Updated: 2024/01/16 14:07:49 by dani             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
 ** Definicion: Reserva memoria (con malloc(3)) y devuelve la cadena de caracteres representando el entero recibido como argumento. Los números negativos deben ser manejados.
