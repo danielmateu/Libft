@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:22:50 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/22 14:23:48 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:58:11 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,28 @@
 ** External functs: write
 */
 
+//ft_strlen
+/*
+size_t  ft_strlen(const char *s)
+{
+    size_t i;
+
+    i = 0;
+    while (s[i])
+        i++;
+    return (i);
+}
+*/
+
 void    ft_putstr_fd(char const *s, int fd)
 {
     write(fd, s, ft_strlen(s));
 }
-
+/*
 int main(void)
 {
     // Test para comprobar uso de ft_putstr_fd
     ft_putstr_fd("Hola", 1);
     return (0);
 }
+*/

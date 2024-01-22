@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:24:50 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/22 11:28:36 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:51:51 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char    *ft_itoa(int n)
         str[0] = '-';
     return (str);
 }
-
+/*
 int main(void)
 {
     int n = -2147483648;
@@ -80,3 +80,4 @@ int main(void)
     printf("%s\n", ft_itoa(n4));
     return (0);
 }
+*/
