@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:19:37 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/18 18:10:08 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:18:42 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@
         The substring. NULL if the allocation fails.
     External functions:
         malloc
-    Description:
-        Allocates (with malloc(3)) and returns a substring from the string ’s’.
-        The substring begins at index ’start’ and is of maximum size ’len’.
+    Descripcion:
+        Reserva memoria (con malloc(3)) y devuelve la cadena de caracteres que
+        resulta de la substracción de ’s’.
+        El substring comienza en el índice ’start’ y tiene como tamaño máximo ’len’.
 */
 
 // int	ft_strlen(const char *str)
