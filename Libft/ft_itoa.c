@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:24:50 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/16 14:07:49 by dani             ###   ########.fr       */
+/*   Updated: 2024/01/22 11:28:36 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,31 @@
 ** External functs: malloc
 */
 
+int calculate_sign(int n)
+{
+    int sign;
+    if (n < 0)
+        sign = -1;
+    else
+        sign = 1;
+    return (sign);
+}
+
+int calculate_len(int n)
+{
+    int len;
+    if (n <= 0)
+        len = 1;
+    else
+        len = 0;
+    while (n)
+    {
+        n /= 10;
+        len++;
+    }
+    return (len);
+}
+
 char    *ft_itoa(int n)
 {
     long    num;
@@ -27,14 +52,9 @@ char    *ft_itoa(int n)
     int     sign;
     char    *str;
 
-    sign = (n < 0) ? -1 : 1;
+    sign = calculate_sign(n);
     num = (long)n * sign;
-    len = (n <= 0) ? 1 : 0;
-    while (n)
-    {
-        n /= 10;
-        len++;
-    }
+    len = calculate_len(n);
     if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
         return (NULL);
     str[len] = '\0';
@@ -47,11 +67,16 @@ char    *ft_itoa(int n)
         str[0] = '-';
     return (str);
 }
-/*
+
 int main(void)
 {
     int n = -2147483648;
+    int n2 = 2147483647;
+    int n3 = 0;
+    int n4 = 9;
     printf("%s\n", ft_itoa(n));
+    printf("%s\n", ft_itoa(n2));
+    printf("%s\n", ft_itoa(n3));
+    printf("%s\n", ft_itoa(n4));
     return (0);
 }
-*/
