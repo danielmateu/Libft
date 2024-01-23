@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:05:56 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/22 17:05:36 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:32:16 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ char	**ft_split(char const *s, char c)
 	strs[j] = NULL;
 	return (strs);
 }
-/*
+
 int main(void)
 {
 	char	**strs;
@@ -121,4 +121,4 @@ int main(void)
 	}
 	return (0);
 }
-*/
+
