@@ -3,18 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dani <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:33:45 by dani              #+#    #+#             */
-/*   Updated: 2024/01/16 14:33:45 by dani             ###   ########.fr       */
+/*   Updated: 2024/01/23 15:09:46 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Descripcion: Aplica la funcion f a cada caracter de la cadena de caracteres pasada como argumento para crear una nueva cadena de caracteres (con malloc(3)) que resulta de las aplicaciones sucesivas de f.
-** Return value: La cadena de caracteres creada a partir de las aplicaciones sucesivas de f. Devuelve NULL si falla la asignacion de memoria.
-** Parametros: #1. La cadena de caracteres sobre la cual iterar.
-** #2. La funcion a aplicar a cada caracter de s.
+** Descripcion: 
+** Aplica la funcion f a cada caracter de la cadena de caracteres pasada como
+** argumento para crear una nueva cadena de caracteres (con malloc(3)) que 
+** resulta de las aplicaciones sucesivas de f.
+** Return value: 
+**  La cadena de caracteres creada a partir de las aplicaciones sucesivas de f. 
+**  Devuelve NULL si falla la asignacion de memoria.
+** Parametros: 
+**      #1. La cadena de caracteres sobre la cual iterar.
+**      #2. La funcion a aplicar a cada caracter de s.
 ** External functs: malloc
 */
 
@@ -45,23 +51,24 @@ char toupper_wrapper(unsigned int i, char c)
 }
 */
 
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char    *str;
-    int     i;
+	char	*str;
+	int		i;
 
-    i = 0;
-    if (!s || !f)
-        return (NULL);
-    if (!(str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-        return (NULL);
-    while (s[i])
-    {
-        str[i] = f(i, s[i]);
-        i++;
-    }
-    str[i] = '\0';
-    return (str);
+	i = 0;
+	if (!s || !f)
+		return (NULL);
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (NULL);
+	while (s[i])
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 /*
 int main(void)

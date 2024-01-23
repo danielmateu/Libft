@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:19:37 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/22 16:47:45 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 15:16:11 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@
     External functions:
         malloc
     Descripcion:
-        Reserva memoria (con malloc(3)) y devuelve la cadena de caracteres que
-        resulta de la substracción de ’s’.
-        El substring comienza en el índice ’start’ y tiene como tamaño máximo ’len’.
+        Reserva memoria (con malloc(3)) y devuelve la 
+        cadena de caracteres que resulta de la substracción de ’s’.
+        El substring comienza en el índice ’start’ y 
+        tiene como tamaño máximo ’len’.
 */
 
 // int	ft_strlen(const char *str)
@@ -37,40 +38,45 @@
 //     return (i);
 // }
 
-char *allocate_and_fill(const char *s, size_t start, size_t len)
+char	*allocate_and_fill(const char *s, size_t start, size_t len)
 {
-    char *str;
-    size_t i = 0;
+	char	*str;
+	size_t	i;
 
-    str = (char *)malloc(sizeof(char) * (len + 1));
-    if (!str)
-        return (NULL);
-    while (i < len && s[start + i])
-    {
-        str[i] = s[start + i];
-        i++;
-    }
-    str[i] = '\0';
-    return (str);
+	i = 0;
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	while (i < len && s[start + i])
+	{
+		str[i] = s[start + i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    if (!s)
-        return (NULL);
-    size_t str_len = ft_strlen(s);
-    if (start > str_len)
-    {
-        char *str = (char *)malloc(sizeof(char));
-        if (!str)
-            return (NULL);
-        str[0] = '\0';
-        return (str); 
-    }
-    size_t substr_len = str_len - start;
-    if (len > substr_len)
-        len = substr_len;
-    return allocate_and_fill(s, start, len);
+	size_t	str_len;
+	char	*str;
+	size_t	substr_len;
+
+	if (!s)
+		return (NULL);
+	str_len = ft_strlen(s);
+	if (start > str_len)
+	{
+		str = (char *)malloc(sizeof(char));
+		if (!str)
+			return (NULL);
+		str[0] = '\0';
+		return (str);
+	}
+	substr_len = str_len - start;
+	if (len > substr_len)
+		len = substr_len;
+	return (allocate_and_fill(s, start, len));
 }
 /*
 int main(void){

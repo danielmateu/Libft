@@ -1,14 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: damateu- <damateu-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:13:12 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/11 17:36:31 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:50:38 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	Descripcion: Rellena un bloque de memoria con un valor
+	Parametros:
+		- b: bloque de memoria a rellenar
+		- c: valor a rellenar
+		- len: numero de bytes a rellenar
+	Retorno: bloque de memoria rellenado
+
+	Puntualizacion: usamos un puntero a unsigned char para poder rellenar
+	byte a byte
+*/
 
 #include "libft.h"
 

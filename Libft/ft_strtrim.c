@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:08:52 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/18 17:41:13 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 15:13:49 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,31 @@
 ** Return value The trimmed string. NULL if the allocation fails.
 */
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    char *str;
-    int i;
-    int j;
-    int k;
+	char	*str;
+	int		i;
+	int		j;
+	int		k;
 
-    i = 0;
-    j = 0;
-    k = 0;
-    if (!s1 || !set)
-        return (NULL);
-    while (s1[i] && ft_strchr(set, s1[i]))
-        i++;
-    j = ft_strlen(s1 + i);
-    if (j)
-        while (s1[i + j - 1] && ft_strchr(set, s1[i + j - 1]))
-            j--;
-    if (!(str = (char *)malloc(sizeof(char) * (j + 1))))
-        return (NULL);
-    while (k < j)
-        str[k++] = s1[i++];
-    str[k] = '\0';
-    return (str);
+	i = 0;
+	j = 0;
+	k = 0;
+	if (!s1 || !set)
+		return (NULL);
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	j = (ft_strlen(s1 + i));
+	if (j)
+		while (s1[i + j - 1] && ft_strchr(set, s1[i + j -1]))
+			j--;
+	str = (char *)malloc(sizeof(char) * (j + 1));
+	if (!str)
+		return (NULL);
+	while (k < j)
+		str[k++] = s1[i++];
+	str[k] = '\0';
+	return (str);
 }
 /*
 int main()

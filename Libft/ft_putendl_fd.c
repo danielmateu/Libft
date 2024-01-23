@@ -6,42 +6,43 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:51:17 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 14:13:26 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 15:04:02 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-    Definicion: Escribe la cadena s en el file descriptor dado, seguido de un salto de linea.
+    Definicion: Escribe la cadena s en el file descriptor dado, seguido de un 
+	salto de linea.
     parametros: #1. La cadena que hay que escribir.
                 #2. El file descriptor sobre el que hay que escribir.
-
     valor de retorno: nada.
     funciones externas: write
 */
 
 #include "libft.h"
 /*
-int ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	i = 0;
+	while(s[i])
+	{
+		i++;
+	}
+	return (i);
 }
 */
-
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    char	n;
+	char	n;
 
-    n = '\n';
-    if (s)
-    {
-        write(fd, s, ft_strlen(s));
-        write(fd, &n, 1);
-    }
+	n = '\n';
+	if (s)
+	{
+		write(fd, s, ft_strlen(s));
+		write(fd, &n, 1);
+	}
 }
 /*
 int main()

@@ -1,5 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/23 14:59:03 by damateu-          #+#    #+#             */
+/*   Updated: 2024/01/23 15:02:41 by damateu-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+	Description: Copia n bytes de src a dst
+	Parametros:
+		- dst: destino de la copia
+		- src: origen de la copia
+		- n: numero de bytes a copiar
+	Retorno: puntero a dst
+
+*/
+
 #include "libft.h"
-#include <stddef.h>
+//#include <stddef.h>
 
 // int ft_strlen(const char *str)
 // {
@@ -11,30 +33,31 @@
 //     return (i);
 // }
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t i;
-    size_t j;
-    size_t dst_len;
-    size_t src_len;
+	size_t	i;
+	size_t	j;
+	size_t	dst_len;
+	size_t	src_len;
 
-    i = 0;
-    j = 0;
-    dst_len = ft_strlen(dst);
-    src_len = ft_strlen(src);
-    if (size <= dst_len)
-        return (src_len + size);
-    while (dst[i] && i < size - 1)
-        i++;
-    while (src[j] && i < size - 1)
-    {
-        dst[i] = src[j];
-        i++;
-        j++;
-    }
-    dst[i] = '\0';
-    return (dst_len + src_len);
+	i = 0;
+	j = 0;
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (size <= dst_len)
+		return (src_len + size);
+	while (dst[i] && i < size - 1)
+		i++;
+	while (src[j] && i < size - 1)
+	{
+		dst[i] = src[j];
+		i++;
+		j++;
+	}
+	dst[i] = '\0';
+	return (dst_len + src_len);
 }
+
 /*
 int main(void)
 {
