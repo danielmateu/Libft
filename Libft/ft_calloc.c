@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 11:45:42 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/17 12:00:01 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:31:26 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,27 +19,16 @@
         - size: tamaño de cada elemento
     Retorno: puntero a la memoria reservada
 */
-/*
-void    ft_bzero(void *s, size_t n)
+
+void	*ft_calloc(size_t count, size_t size)
 {
-    // memset(s, 0, n);
-    // sin usar memset
-    unsigned char *str;
+	void	*ptr;
 
-    str = (unsigned char *)s;
-    while (n--)
-        *str++ = 0;
-}
-*/
-
-void *ft_calloc(size_t count, size_t size)
-{
-    void *ptr;
-
-    if (!(ptr = malloc(count * size)))
-        return (NULL);
-    ft_bzero(ptr, count * size);
-    return (ptr);
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }
 /*
 int main(void)
