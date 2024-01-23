@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:29:43 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/22 16:53:17 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:12:51 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@
     Valor de retorno: Nada.
     Funciones externas: write.
 */
-
+/*
 void    ft_putchar_fd(char c, int fd)
 {
     write(fd, &c, 1);
 }
+*/
 
 void	ft_putnbr_fd(int n, int fd)
 {

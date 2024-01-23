@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:05:56 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 13:32:16 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:20:18 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,101 +24,94 @@
 			La tabla de cadenas resultante de la separación.
 		Funciones externas autorizadas:
 			malloc
-			
+
 */
 
 #include "libft.h"
 
-
-int	ft_strlen(const char *str)
+static size_t	contarpalabras(char const *s, char c)
 {
-	unsigned int	i;
+	size_t	i;
+	size_t	cont;
+	char	old;
+
+	cont = 0;
+	i = 0;
+	old = c;
+	while (s[i])
+	{
+		if (old == c && s[i] != c)
+		{
+			cont++;
+		}
+		old = s[i];
+		i++;
+	}
+	return (cont);
+}
+
+static char	**liberar(char **tab, size_t pos)
+{
+	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (i < pos)
+	{
+		free(tab[i]);
 		i++;
-	return (i);
+	}
+	free(tab);
+	return (NULL);
 }
-
-
-char *allocate_and_fill(const char *s, size_t start, size_t len)
-{
-    char *str;
-    size_t i = 0;
-
-    str = (char *)malloc(sizeof(char) * (len + 1));
-    if (!str)
-        return (NULL);
-    while (i < len && s[start + i])
-    {
-        str[i] = s[start + i];
-        i++;
-    }
-    str[i] = '\0';
-    return (str);
-}
-
-char *ft_substr(char const *s, unsigned int start, size_t len)
-{
-    if (!s)
-        return (NULL);
-    size_t str_len = ft_strlen(s);
-    if (start > str_len)
-    {
-        char *str = (char *)malloc(sizeof(char));
-        if (!str)
-            return (NULL);
-        str[0] = '\0';
-        return (str); 
-    }
-    size_t substr_len = str_len - start;
-    if (len > substr_len)
-        len = substr_len;
-    return allocate_and_fill(s, start, len);
-}
-
 
 char	**ft_split(char const *s, char c)
 {
-	char	**strs;
-	int		i;
-	int		j;
-	int		word_len;
+	size_t	i;
+	char	**resultado;
+	size_t	posicion;
+	size_t	inicio;
 
 	i = 0;
-	j = 0;
-	if (!s || !(strs = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1))))
+	posicion = 0;
+	inicio = 0;
+	resultado = malloc(sizeof(char *) * (contarpalabras(s, c) + 1));
+	if (!resultado)
 		return (NULL);
 	while (s[i])
 	{
-		while (s[i] == c)
-			i++;
-		word_len = 0;
-		while (s[i + word_len] && s[i + word_len] != c)
-			word_len++;
-		if (word_len)
+		if (i > 0 && s[i] != c && s[i - 1] == c)
+			inicio = i;
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 		{
-			strs[j] = ft_substr(s, i, word_len);
-			j++;
-			i += word_len;
+			resultado[posicion++] = ft_substr(s, inicio, i - inicio + 1);
+			if (!resultado[posicion - 1])
+				return (liberar(resultado, posicion - 1));
 		}
+		i++;
 	}
-	strs[j] = NULL;
-	return (strs);
+	resultado[posicion] = NULL;
+	return (resultado);
 }
 
+/*
 int main(void)
 {
-	char	**strs;
-	int		i;
+	char **strs;
+	int i;
 
 	strs = ft_split("Menudo dolor de tarro", ' ');
+	if (strs == NULL)
+	{
+		printf("Memory allocation failed\n");
+		return (1);
+	}
 	i = 0;
-	while(strs[i])
+	while (strs[i] != NULL)
 	{
 		printf("%s\n", strs[i]);
 		i++;
 	}
+	printf("Allocated size: %d\n", i);
 	return (0);
 }
-
+*/

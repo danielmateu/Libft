@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:51:17 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/22 16:53:01 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:13:26 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 */
 
 #include "libft.h"
-
+/*
 int ft_strlen(const char *s)
 {
     int i;
@@ -30,6 +30,7 @@ int ft_strlen(const char *s)
         i++;
     return (i);
 }
+*/
 
 void    ft_putendl_fd(char *s, int fd)
 {
