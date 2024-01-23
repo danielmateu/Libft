@@ -6,9 +6,16 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:14:47 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/16 13:52:07 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:32:53 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	Descripcion: Comprueba si el caracter es alfanumerico
+	Parametros:
+		- c: caracter a comprobar
+	Retorno: 1 si es alfanumerico, 0 si no lo es
+*/
 
 #include "libft.h"
 
