@@ -6,7 +6,7 @@
 #    By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 11:40:17 by damateu-          #+#    #+#              #
-#    Updated: 2024/01/23 17:30:57 by damateu-         ###   ########.fr        #
+#    Updated: 2024/01/23 17:37:03 by damateu-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,8 @@ all: $(NAME)
 #$(NAME):$(OBJ)
 #	ar rc $(NAME) $(OBJ)
 
-$(NAME):$(OBJ) $(OBJ_BONUS)
-	ar rc $(NAME) $(OBJ) $(OBJ_BONUS)
+$(NAME):$(OBJ) 
+	ar rc $(NAME) $(OBJ) 
 
 # Regla para crear archivos objeto
 %.o : %.c
@@ -57,8 +57,8 @@ re: fclean all
 # Regla bonus, en la que se añaden los headers, librerias o 
 # funciones que esten prohibidas en la parte principal del proyecto.
 # Los bonus deben estar en archivos distintos _bonus.{c/h}. 
-bonus: $(OBJ) $(OBJ_BONUS)
-	ar rc $(NAME) $(OBJ) $(OBJ_BONUS)
+bonus: $(OBJ_BONUS)
+	ar rc $(NAME) $(OBJ_BONUS)
 
 # Regla para borrar los archivos objeto y la biblioteca bonus
 #bonus_clean: clean
