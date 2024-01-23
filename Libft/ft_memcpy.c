@@ -6,9 +6,18 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 12:10:20 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/18 18:29:31 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:47:26 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	Description: Copia n bytes de src a dst
+	Parametros:
+		- dst: destino de la copia
+		- src: origen de la copia
+		- n: numero de bytes a copiar
+	Retorno: puntero a dst
+*/
 
 #include "libft.h"
 
