@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:41:23 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 15:16:48 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:20:37 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <string.h>
 # include <unistd.h>
 # include <stddef.h>
+
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+} t_list;
 
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
