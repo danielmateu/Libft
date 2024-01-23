@@ -6,7 +6,7 @@
 #    By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 11:40:17 by damateu-          #+#    #+#              #
-#    Updated: 2024/01/23 16:30:33 by damateu-         ###   ########.fr        #
+#    Updated: 2024/01/23 17:30:57 by damateu-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,9 @@ SRC = ft_isalpha.c ft_isalnum.c ft_isdigit.c ft_isascii.c ft_isprint.c ft_strlen
 #SRC = $(wildcard ft_*.c)
 
 # Archivos bonus
-SRC_BONUS = 
+SRC_BONUS = ft_lstnew_bonus.c 
 
+# Compilador
 CC = gcc
 
 # Archivos objeto
@@ -32,9 +33,12 @@ OBJ_BONUS = $(SRC_BONUS:.c=.o)
 # Regla por defecto
 all: $(NAME)
 
-# Regla para crear la biblioteca
-$(NAME):$(OBJ)
-	ar rc $(NAME) $(OBJ)
+# Regla para crear la biblioteca incluyendo los obj_bonus
+#$(NAME):$(OBJ)
+#	ar rc $(NAME) $(OBJ)
+
+$(NAME):$(OBJ) $(OBJ_BONUS)
+	ar rc $(NAME) $(OBJ) $(OBJ_BONUS)
 
 # Regla para crear archivos objeto
 %.o : %.c
@@ -42,7 +46,7 @@ $(NAME):$(OBJ)
 
 # Regla para eliminar los archivos objeto
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 # Regla para borrar archivos objeto y la biblioteca
 fclean: clean
