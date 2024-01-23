@@ -6,7 +6,7 @@
 #    By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 11:40:17 by damateu-          #+#    #+#              #
-#    Updated: 2024/01/23 17:37:03 by damateu-         ###   ########.fr        #
+#    Updated: 2024/01/23 17:40:39 by damateu-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ OBJ_BONUS = $(SRC_BONUS:.c=.o)
 # Regla por defecto
 all: $(NAME)
 
-# Regla para crear la biblioteca incluyendo los obj_bonus
+# Regla para crear la biblioteca 
 #$(NAME):$(OBJ)
 #	ar rc $(NAME) $(OBJ)
 
