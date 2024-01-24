@@ -6,12 +6,22 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:32:27 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/24 15:34:05 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/24 16:04:46 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*
+    Descripcion: 
+        Añade el elemento ’new’ al final de la lista.
+    Parametros:
+        #1. La direccion del puntero al primer elemento de la lista.
+        #2. La direccion del puntero al elemento que hay que añadir a la lista.
+    Valor de retorno:
+        None
+*/
 
+#include "libft.h"
+/*
 // ft_lstnew
 t_list *ft_lstnew(void *content)
 {
@@ -36,7 +46,7 @@ t_list *ft_lstlast(t_list *lst)
         last = last->next;
     return (last);
 }
-
+*/
 void ft_lstadd_back(t_list **lst, t_list *new)
 {
     t_list *last;
@@ -51,7 +61,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
     last = ft_lstlast(*lst);
     last->next = new;
 }
-
+/*
 int main(void)
 {
     t_list *lst;
@@ -63,3 +73,4 @@ int main(void)
     printf("%s\n", lst->next->content);
     return (0);
 }
+*/
