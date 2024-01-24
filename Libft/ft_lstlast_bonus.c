@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:43:50 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/24 14:45:53 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/24 15:12:27 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,43 @@
 */
 
 #include "libft.h"
-
-t_list *ft_lstlast(t_list *lst)
+/*
+t_list	*ft_lstnew(void *content)
 {
-    t_list *last;
-
-    last = lst;
-    if (last)
-    {
-        while (last->next)
-            last = last->next;
-    }
-    return (last);
+	t_list  *new;
+	new = malloc(sizeof(t_list));
+    if (!new)
+        return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
+*/
 
-int main(void)
+t_list	*ft_lstlast(t_list *lst)
 {
-    t_list *lst;
-    t_list *last;
-
-    lst = ft_lstnew("Hola");
-    lst->next = ft_lstnew("Mundo");
-    lst->next->next = ft_lstnew("Cruel");
-    lst->next->next->next = ft_lstnew("!");
-    last = ft_lstlast(lst);
-    printf("%s\n", last->content);
-    return (0);
+	t_list *last;
+	
+	last = lst;
+	if (last)
+	{
+		while (last->next)
+			last = last->next;
+	}
+	return (last);
 }
+/*
+int	main(void)
+{
+	t_list *lst;
+	t_list *last;
+	lst = ft_lstnew("Hola");
+	
+	lst->next = ft_lstnew("Mundo");
+	lst->next->next = ft_lstnew("Cruel");
+	lst->next->next->next = ft_lstnew("!");
+	last = ft_lstlast(lst);
+	printf("%s\n", last->content);
+	return (0);
+}
+*/
