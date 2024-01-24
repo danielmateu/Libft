@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 11:52:15 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/24 11:59:43 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/24 12:02:41 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void ft_lstadd_front(t_list **lst, t_list *new)
     Linea 3: El puntero next de new apunta a la direccion de lst.
     Linea 4: El puntero lst apunta a la direccion de new.
 */
-
+/*
 int main()
 {
     t_list *lst;
@@ -56,3 +56,4 @@ int main()
     printf("%s\n", lst->next->next->content);
     return (0);
 }
+*/
