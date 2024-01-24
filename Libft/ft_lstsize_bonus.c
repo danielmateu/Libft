@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 13:29:22 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/24 13:41:27 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/24 16:37:51 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int ft_lstsize(t_list *lst)
     }
     return (i);
 }
-
+/*
 int main(void)
 {
     t_list *lst;
@@ -52,3 +52,4 @@ int main(void)
     printf("%d\n", ft_lstsize(lst));
     return (0);
 }
+*/

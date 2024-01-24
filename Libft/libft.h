@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:41:23 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/24 16:23:14 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/24 16:35:15 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ int     ft_lstsize(t_list *lst);
 t_list  *ft_lstlast(t_list *lst);
 void    ft_lstadd_back(t_list **lst, t_list *new);
 void    ft_lstdelone(t_list *lst, void (*del)(void*));
+void    ft_lstiter(t_list *lst, void (*f)(void *));
 
 #endif

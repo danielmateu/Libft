@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 16:16:30 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/24 16:27:36 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/24 16:39:09 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 #include "libft.h"
 
 //lst_new crea un nuevo elemento de la lista
+/*
 t_list  *ft_lstnew(void *content)
 {
     t_list  *new;
@@ -38,6 +39,7 @@ t_list  *ft_lstnew(void *content)
     new->next = NULL;
     return (new);
 }
+*/
 
 void    ft_lstdelone(t_list *lst, void (*del)(void*))
 {
@@ -49,7 +51,7 @@ void    ft_lstdelone(t_list *lst, void (*del)(void*))
 }
 
 // Funcion main para testear la funcion
-
+/*
 int main(void) {
     t_list *lst;
     char *str;
@@ -65,3 +67,4 @@ int main(void) {
     ft_lstdelone(lst, free);
     return (0);
 }
+*/
