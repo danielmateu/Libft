@@ -54,14 +54,14 @@ int main()
     lst = ft_lstnew(str1);
     lst2 = ft_lstnew(str2);
     lst3 = ft_lstnew(str3);
+
+    // Mostrar los elementos de la lista
+    printf("%s\n", lst->content);
+
     ft_lstclear(&lst, free);
 
     // Imprimir los elementos de la lista
-    while (lst)
-    {
-        printf("%s\n", lst->content);
-        lst = lst->next;
-    }
+    printf("%s\n", lst->content);
 
     return (0);
 }
