@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 /*
-    Descripcion: Borra y libera la memoria de un elemento y todos los que le 
-    siguen, usando la funcion 'del' y free(3). 
+    Descripcion: Borra y libera la memoria de un elemento y todos los que le
+    siguen, usando la funcion 'del' y free(3).
     Por ultimo, el puntero inicial debe ser establecido en NULL.
 
     Param. #1: La direccion del puntero a un elemento.
@@ -26,12 +26,12 @@
 
 #include "libft.h"
 
-void    ft_lstclear(t_list **lst, void (*del)(void*))
+void ft_lstclear(t_list **lst, void (*del)(void *))
 {
     t_list *tmp;
 
     if (!lst || !del)
-        return ;
+        return;
     while (*lst)
     {
         tmp = (*lst)->next;
@@ -39,4 +39,29 @@ void    ft_lstclear(t_list **lst, void (*del)(void*))
         *lst = tmp;
     }
     *lst = NULL;
+}
+
+int main()
+{
+    t_list *lst;
+    t_list *lst2;
+    t_list *lst3;
+
+    char *str1 = ft_strdup("Hola");
+    char *str2 = ft_strdup("Mundo");
+    char *str3 = ft_strdup("Cruel");
+
+    lst = ft_lstnew(str1);
+    lst2 = ft_lstnew(str2);
+    lst3 = ft_lstnew(str3);
+    ft_lstclear(&lst, free);
+
+    // Imprimir los elementos de la lista
+    while (lst)
+    {
+        printf("%s\n", lst->content);
+        lst = lst->next;
+    }
+
+    return (0);
 }

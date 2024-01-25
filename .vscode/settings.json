@@ -2,5 +2,6 @@
     "cSpell.words": [
         "damateu",
         "strtrim"
-    ]
+    ],
+    "C_Cpp.errorSquiggles": "disabled"
 }
