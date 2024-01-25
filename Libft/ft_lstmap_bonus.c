@@ -39,3 +39,28 @@ t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
     }
     return (new);
 }
+
+int main(void)
+{
+    // Test para ft_lstmap
+    t_list *lst;
+    t_list *lst2;
+    t_list *lst3;
+
+    char *str1 = ft_strdup("Hola");
+    char *str2 = ft_strdup("Mundo");
+    char *str3 = ft_strdup("Cruel");
+
+    lst = ft_lstnew(str1);
+    lst2 = ft_lstnew(str2);
+    lst3 = ft_lstnew(str3);
+
+    // Mostrar los elementos de la lista
+    printf("%s\n", lst->content);
+
+    ft_lstmap(lst, free, free);
+
+    // Imprimir los elementos de la lista
+    printf("%s\n", lst->content);
+    return (0);
+}
