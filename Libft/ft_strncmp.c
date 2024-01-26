@@ -3,12 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: damateu- <damateu-@student.42barcel>       +#+  +:+       +#+        */
+/*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:58:59 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/11 17:34:56 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:32:28 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	Descripcion: 
+	La funcion strncmp() compara a lo sumo los primeros n bytes de s1 y s2.
+
+	Parametros:
+	s1: Cadena a comparar.
+	s2: Cadena a comparar.
+	n: Numero maximo de bytes a comparar.
+
+	Devuelve:
+	Devuelve un entero menor que, igual a, o mayor que cero si los primeros n 
+	bytes de s1 son, respectivamente, menores que, iguales a, o mayores que 
+	los primeros n bytes de s2. 
+	
+*/
 
 #include "libft.h"
 #include <stdio.h>
