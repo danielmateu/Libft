@@ -22,18 +22,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*new_node;
-    void    *new_content;
+	void	*new_content;
 
 	new_lst = NULL;
 	new_node = NULL;
-    new_content = NULL;
+	new_content = NULL;
 	while (lst)
 	{
-        new_content = f(lst->content);
-		new_node = ft_lstnew(f(lst->content));
+		new_content = f(lst->content);
+		new_node = ft_lstnew(new_content);
 		if (!new_node)
 		{
-            del(new_content);
+			del(new_content);
 			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}
@@ -43,28 +43,35 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_lst);
 }
 /*
+void *copy_content(void *content)
+{
+    char *original = (char *)content;
+    char *copy = malloc(strlen(original) + 1);
+    strcpy(copy, original);
+    return copy;
+}
+*/
+/*
 int main(void)
 {
-    // Test para ft_lstmap
-    t_list *lst;
-    t_list *lst2;
-    t_list *lst3;
+    t_list *lst = ft_lstnew("Hello");
+    lst->next = ft_lstnew("World");
+    lst->next->next = ft_lstnew("Cruel");
+    lst->next->next->next = ft_lstnew("!!!");
+    lst->next->next->next->next = NULL;
 
-    char *str1 = ft_strdup("Hola");
-    char *str2 = ft_strdup("Mundo");
-    char *str3 = ft_strdup("Cruel");
+    t_list *new_lst = ft_lstmap(lst, copy_content, free);
 
-    lst = ft_lstnew(str1);
-    lst2 = ft_lstnew(str2);
-    lst3 = ft_lstnew(str3);
+    while (new_lst)
+    {
+        printf("%s\n", (char *)new_lst->content);
+        new_lst = new_lst->next;
+    }
 
-    // Mostrar los elementos de la lista
-    printf("%s\n", lst->content);
+    ft_lstclear(&lst, free);
+    ft_lstclear(&new_lst, free);
 
-    ft_lstmap(lst, free, free);
-
-    // Imprimir los elementos de la lista
-    printf("%s\n", lst->content);
     return (0);
 }
+
 */

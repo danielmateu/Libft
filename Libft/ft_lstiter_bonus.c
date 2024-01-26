@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 16:34:50 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/26 11:56:54 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/26 13:59:42 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
         lst = lst->next;
     }
 }
-
+/*
 int main(void)
 {}
+*/
