@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:29:20 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 14:30:07 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:09:34 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,11 @@ void	ft_bzero(void *s, size_t n)
 int main()
 {
     char str[] = "Hello world!";
-    ft_bzero (str, 0);
+    // ft_bzero -> rellena con 0s
+    ft_bzero (str, 1);
     // puts -> imprime el string
-    puts (str);
+    printf("%s", str);
     return 0;
 }
 */
+

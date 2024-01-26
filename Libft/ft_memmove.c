@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:20:28 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 14:48:35 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:15:42 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,9 @@ int main()
 {
     char src[] = "GeeksForGeeks";
     char dest[] = "GeeksForGeeks";
-    ft_memmove(dest + 5, dest, strlen(dest) + 1);
+    ft_memmove(dest + 5, dest, 6);
     printf("Resultado: %s", dest);
     return 0;
 }
 */
+
