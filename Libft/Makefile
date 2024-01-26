@@ -6,63 +6,50 @@
 #    By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 11:40:17 by damateu-          #+#    #+#              #
-#    Updated: 2024/01/24 16:36:33 by damateu-         ###   ########.fr        #
+#    Updated: 2024/01/26 16:18:14 by damateu-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+SRCS	= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c 
 
-INCL = libft.h
-# Flags del compilador
-CFLAGS = -Wall -Wextra -Werror
-SRC = ft_isalpha.c ft_isalnum.c ft_isdigit.c ft_isascii.c ft_isprint.c ft_strlen.c ft_toupper.c ft_tolower.c ft_strchr.c ft_memset.c ft_strncmp.c ft_bzero.c ft_memmove.c ft_strlcpy.c ft_strtrim.c ft_strlcat.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strjoin.c ft_strrchr.c ft_substr.c ft_split.c ft_strdup.c ft_memcpy.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c 
-#SRC = $(wildcard ft_*.c)
+BSRCS	= ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c ft_lstmap_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c
 
-# Archivos bonus
-SRC_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+HEAD	= libft.h
 
-# Compilador
-CC = gcc
+OBJS	= ${SRCS:.c=.o}
 
-# Archivos objeto
-OBJ = $(SRC:.c=.o)
+BOBJS	= ${BSRCS:.c=.o}
 
-# Archivos objeto bonus
-OBJ_BONUS = $(SRC_BONUS:.c=.o)
+NAME	= libft.a
 
-# Regla por defecto
-all: $(NAME)
+AR		= ar rcs
 
-# Regla para crear la biblioteca 
-#$(NAME):$(OBJ)
-#	ar rc $(NAME) $(OBJ)
+RM		= rm -f
 
-$(NAME):$(OBJ) 
-	ar rc $(NAME) $(OBJ) 
+CC		= cc
 
-# Regla para crear archivos objeto
-%.o : %.c
-	$(CC) $(CFLAGS) -c $<
+CFLAGS	= -Wall -Wextra -Werror
 
-# Regla para eliminar los archivos objeto
+all: 		${NAME}
+
+%.o:		%.c
+				${CC} ${CFLAGS} -c $< -DMP
+
+${NAME}:	${OBJS} ${HEAD} Makefile
+				${AR} ${NAME} ${OBJS}
+
 clean:
-	rm -f $(OBJ) $(OBJ_BONUS)
+				${RM} ${OBJS} ${BOBJS} do_bonus
 
-# Regla para borrar archivos objeto y la biblioteca
-fclean: clean
-	rm -f $(NAME)
-# Regla para recompliar todo
-re: fclean all
+fclean:		clean
+				${RM} ${NAME}
 
-# Regla bonus, en la que se añaden los headers, librerias o 
-# funciones que esten prohibidas en la parte principal del proyecto.
-# Los bonus deben estar en archivos distintos _bonus.{c/h}. 
-bonus: $(OBJ_BONUS)
-	ar rc $(NAME) $(OBJ_BONUS)
+re:			fclean all
 
-# Regla para borrar los archivos objeto y la biblioteca bonus
-#bonus_clean: clean
-#	rm -f $(OBJ_BONUS)
+bonus:		do_bonus
 
+do_bonus:	${NAME} ${BOBJS} ${HEAD} Makefile
+			${AR} ${NAME} ${BOBJS}
+			touch do_bonus
 
-.PHONY: all clean fclean re
+.PHONY:		clean fclean re all bonus

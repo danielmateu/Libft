@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 16:42:28 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/26 13:59:44 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/26 16:07:41 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
     Valor de retorno: None.
 
-    Funciones externas autorizadas: free(3).
+    Funciones externas autorizadas: free(3)!
 */
 
 #include "libft.h"
