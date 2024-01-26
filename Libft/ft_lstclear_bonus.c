@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 16:42:28 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/24 16:45:08 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/26 11:34:30 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,25 +43,48 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
 
 int main()
 {
+    /*
+    ** 1. Crear una lista con 3 nodos
+    */
     t_list *lst;
     t_list *lst2;
     t_list *lst3;
 
+    /*
+    ** 2. Crear 3 strings para los nodos
+    */
     char *str1 = ft_strdup("Hola");
     char *str2 = ft_strdup("Mundo");
     char *str3 = ft_strdup("Cruel");
 
+    /*
+    ** 3. Crear los nodos con los strings
+    */
     lst = ft_lstnew(str1);
     lst2 = ft_lstnew(str2);
     lst3 = ft_lstnew(str3);
 
-    // Mostrar los elementos de la lista
-    printf("%s\n", lst->content);
+    /*
+    ** 4. Asignar el nodo 2 al nodo 1
+    */
+    lst->next = lst2;
 
+    /*
+    ** 5. Asignar el nodo 3 al nodo 2
+    */
+    lst2->next = lst3;
+
+    // Mostrar el tamaño de la lista
+    printf("Tamaño de la lista: %d\n", ft_lstsize(lst));
+
+    /*
+    ** 7. Borrar la lista
+    */
     ft_lstclear(&lst, free);
 
-    // Imprimir los elementos de la lista
-    printf("%s\n", lst->content);
-
+    /*
+    ** 8. Mostrar el tamaño de la lista
+    */
+    printf("Tamaño de la lista: %d\n", ft_lstsize(lst));
     return (0);
 }
