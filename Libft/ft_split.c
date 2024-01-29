@@ -6,15 +6,16 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:05:56 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 14:20:18 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/29 13:58:25 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 	Descripcion:
-		Reserva memoria (con malloc(3)) y devuelve la cadena de caracteres
-		que resulta de la separación de ’s’ usando el carácter ’c’ como
-		delimitador. La tabla de cadenas debe terminar con un puntero NULL.
+		Reserva (utilizando malloc(3)) un array de strings
+		resultante de separar la string ’s’ en substrings
+		utilizando el caracter ’c’ como delimitador. El
+		array debe terminar con un puntero NULL.
 
 		Param. #1:
 			La cadena de la que hay que extraer las cadenas.
@@ -29,30 +30,30 @@
 
 #include "libft.h"
 
-static size_t	contarpalabras(char const *s, char c)
+static size_t count_words(char const *s, char c)
 {
-	size_t	i;
-	size_t	cont;
-	char	old;
+	size_t i;
+	size_t j;
+	char old;
 
-	cont = 0;
 	i = 0;
+	j = 0;
 	old = c;
 	while (s[i])
 	{
 		if (old == c && s[i] != c)
 		{
-			cont++;
+			j++;
 		}
 		old = s[i];
 		i++;
 	}
-	return (cont);
+	return (j);
 }
 
-static char	**liberar(char **tab, size_t pos)
+static char **freedom(char **tab, size_t pos)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
 	while (i < pos)
@@ -64,36 +65,36 @@ static char	**liberar(char **tab, size_t pos)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+char **ft_split(char const *s, char c)
 {
-	size_t	i;
-	char	**resultado;
-	size_t	posicion;
-	size_t	inicio;
+	size_t i;
+	char **res;
+	size_t j;
+	size_t k;
 
 	i = 0;
-	posicion = 0;
-	inicio = 0;
-	resultado = malloc(sizeof(char *) * (contarpalabras(s, c) + 1));
-	if (!resultado)
+	j = 0;
+	k = 0;
+	res = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!res)
 		return (NULL);
 	while (s[i])
 	{
 		if (i > 0 && s[i] != c && s[i - 1] == c)
-			inicio = i;
+			k = i;
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 		{
-			resultado[posicion++] = ft_substr(s, inicio, i - inicio + 1);
-			if (!resultado[posicion - 1])
-				return (liberar(resultado, posicion - 1));
+			res[j++] = ft_substr(s, k, i - k + 1);
+			if (!res[j - 1])
+				return (freedom(res, j - 1));
 		}
 		i++;
 	}
-	resultado[posicion] = NULL;
-	return (resultado);
+	res[j] = NULL;
+	return (res);
 }
 
-/*
+
 int main(void)
 {
 	char **strs;
@@ -114,4 +115,4 @@ int main(void)
 	printf("Allocated size: %d\n", i);
 	return (0);
 }
-*/
+
