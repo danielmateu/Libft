@@ -6,21 +6,26 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:08:52 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 15:13:49 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/29 13:34:52 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters
-** specified in ’set’ removed from the beginning and the end of the string.
+** Elimina todos los caracteres de la string ’set’
+desde el principio y desde el final de ’s1’, hasta
+encontrar un caracter no perteneciente a ’set’. La
+string resultante se devuelve con una reserva de
+malloc(3)
 
 ** Parameters 
-** #1. The string to be trimmed. s1
-** #2. The reference set of characters to trim. set
+** #1. s1: La string que debe ser recortada.
+** #2. set: Los caracteres a eliminar de la string.
 
-** Return value The trimmed string. NULL if the allocation fails.
+** Return:
+** 	La string recortada. NULL si la reserva falla.La string recortada.
+	NULL si falla la reserva de memoria.
 */
 
 char	*ft_strtrim(char const *s1, char const *set)

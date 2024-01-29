@@ -6,14 +6,16 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:43:09 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 15:17:40 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/29 13:15:41 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Param. #1: The prefix string. 
-** Param. #2: The suffix string.
-** Return value: The new string. NULL if the allocation fails.
+** Param. #1: La primera string.
+** Param. #2: La string a añadir a ’s1’.
+** Return value: 
+	La nueva string.
+	NULL si falla la reserva de memoria.
 ** Descripcion: Reserva memoria (con malloc(3)) y devuelve la nueva
 ** cadena de caracteres que resulta de la concatenación de ’s1’ y ’s2’.
 */

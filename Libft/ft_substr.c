@@ -6,26 +6,26 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:19:37 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 15:16:11 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/29 12:58:23 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-    Parameters:
-        #1. s: The string from which to create the substring.
-        #2. start: The start index of the substring in the string ’s’.
-        #3. len: The maximum length of the substring.
-    Return value:
-        The substring. NULL if the allocation fails.
-    External functions:
-        malloc
     Descripcion:
         Reserva memoria (con malloc(3)) y devuelve la 
         cadena de caracteres que resulta de la substracción de ’s’.
         El substring comienza en el índice ’start’ y 
         tiene como tamaño máximo ’len’.
+    Parameters:
+        #1. s: El string del que crear el substring.
+        #2. start: El índice de inicio de la subcadena en la cadena "s".
+        #3. len: La longitud maxima del substring.
+    Return value:
+        El substring. NULL si la asignacion falla.
+    External functions:
+        malloc
 */
 
 // int	ft_strlen(const char *str)
