@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 16:16:30 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/24 16:39:09 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:44:45 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void    ft_lstdelone(t_list *lst, void (*del)(void*))
 }
 
 // Funcion main para testear la funcion
-/*
+
 int main(void) {
     t_list *lst;
     char *str;
@@ -64,7 +64,10 @@ int main(void) {
     strcpy(str, "Hola");  // Copy the string into the allocated memory
 
     lst = ft_lstnew(str);
+    // Mostrar el contenido de lst
+    printf("%s\n", lst->content);
     ft_lstdelone(lst, free);
+    // Mostrar el contenido de lst
+    printf("%s\n", lst->content);
     return (0);
 }
-*/

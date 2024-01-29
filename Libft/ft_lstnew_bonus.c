@@ -6,15 +6,14 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 16:38:28 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 17:13:51 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:24:28 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
     Definicion de la funcion ft_lstnew:
-    Reserva memoria (con malloc(3)) y devuelve un nuevo elemento.
-    La variable ’content’ se inicializa mediante el valor del parámetro ’content’.
-    La variable ’next’ se inicializa con NULL.
+    Crea un nuevo nodo utilizando malloc(3). La
+    variable miembro ’content’ se inicializa con el contenido del parámetro ’content’. La variable ’next’, con NULL.
     Parametro content:
         El contenido del nuevo elemento.
     Valor de retorno:
