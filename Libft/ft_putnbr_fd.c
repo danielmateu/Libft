@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:29:43 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 14:54:58 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:18:53 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,9 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd((nb / 10), fd);
 	ft_putchar_fd(((nb % 10) + '0'), fd);
 }
-/*
+
 int main(void)
 {
-    ft_putnbr_fd(123, 1);
+    ft_putnbr_fd(1234, 1);
     return (0);
 }
-*/

@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:05:56 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/29 13:58:25 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/29 14:13:35 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 */
 
 #include "libft.h"
-
+// cuenta el numero de palabras en una cadena de caracteres
 static size_t count_words(char const *s, char c)
 {
 	size_t i;
@@ -50,7 +50,7 @@ static size_t count_words(char const *s, char c)
 	}
 	return (j);
 }
-
+// libera la memoria previamente asignada a un array de cadenas de caracteres.
 static char **freedom(char **tab, size_t pos)
 {
 	size_t i;
