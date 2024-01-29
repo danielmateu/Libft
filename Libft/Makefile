@@ -6,7 +6,7 @@
 #    By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/09 11:40:17 by damateu-          #+#    #+#              #
-#    Updated: 2024/01/26 16:48:43 by damateu-         ###   ########.fr        #
+#    Updated: 2024/01/29 11:15:19 by damateu-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,8 @@ BOBJS	= ${BSRCS:.c=.o}
 # Name of the library
 NAME	= libft.a
 # Comando para crear la libreria, ar rcs crea la libreria y la hace estatica. a = create, r = insert, c = dont show errors, s = create static library
+# ar-> create, insert, dont show errors, create static library
+#rcs = create, dont show errors, create static library 
 AR		= ar rcs
 # Delete command (used to delete files and folders)
 RM		= rm -f

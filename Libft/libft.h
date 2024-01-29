@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:41:23 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/24 16:35:15 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:21:50 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,18 @@
 # include <string.h>
 # include <unistd.h>
 # include <stddef.h>
+
+/*
+Este código define una estructura de datos llamada "lista enlazada" en el lenguaje de programación C.
+
+La estructura s_list tiene dos miembros:
+
+content: un puntero a void que puede contener una dirección de cualquier tipo de datos. Esto hace que la lista enlazada sea capaz de almacenar cualquier tipo de datos.
+next: un puntero a la misma estructura, que se utiliza para enlazar a la siguiente estructura s_list en la lista enlazada.
+Finalmente, t_list es un alias para struct s_list, lo que significa que puedes usar t_list en lugar de struct s_list para declarar variables de este tipo de estructura.
+
+Las listas enlazadas son útiles cuando necesitas una estructura de datos con un tamaño que pueda cambiar dinámicamente durante la ejecución del programa, y cuando necesitas insertar o eliminar elementos en cualquier posición de la lista de manera eficiente.
+*/
 
 typedef struct s_list
 {
