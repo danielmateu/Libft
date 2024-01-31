@@ -57,32 +57,25 @@ int main()
     char *str2 = ft_strdup("Mundo");
     char *str3 = ft_strdup("Cruel");
 
-    
     // 3. Crear los nodos con los strings
     
     lst = ft_lstnew(str1);
     lst2 = ft_lstnew(str2);
     lst3 = ft_lstnew(str3);
 
-    
-    //4. Asignar el nodo 2 al nodo 1
-    
+    //4. Asignar el nodo 2 al nodo 1 
     lst->next = lst2;
 
-    
     //5. Asignar el nodo 3 al nodo 2
     
     lst2->next = lst3;
-
     // Mostrar el tamaño de la lista
     printf("Tamaño de la lista: %d\n", ft_lstsize(lst));
 
-    
     //7. Borrar la lista
     
     ft_lstclear(&lst, free);
 
-    
     //8. Mostrar el tamaño de la lista
     
     printf("Tamaño de la lista: %d\n", ft_lstsize(lst));
