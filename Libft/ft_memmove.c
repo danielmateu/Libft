@@ -6,12 +6,13 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:20:28 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/26 17:15:42 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/02/02 12:30:42 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-    Description: Copia n bytes de src a dst
+    Description: Copia n bytes de src a dst permitiendo que los buffers se 
+	solapen sin corromper los datos.
     Parametros:
         - dst: destino de la copia
         - src: origen de la copia
@@ -46,14 +47,19 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*
-int main()
+
+
+int	main(void)
 {
-    char src[] = "GeeksForGeeks";
-    char dest[] = "GeeksForGeeks";
-    ft_memmove(dest + 5, dest, 6);
-    printf("Resultado: %s", dest);
-    return 0;
+	char src[] = "Good Bye";
+	char dst[] = "Hello world";
+
+	printf("Antes de llamar la funcion, dest = %s\n", dst);
+	ft_memmove(dst, src, 5);
+	printf("Despues de llamar la funcion, dest = %s\n", dst);
+
+	return (0);
 }
-*/
+
+
 

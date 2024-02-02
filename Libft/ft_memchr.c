@@ -6,19 +6,19 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:40:34 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/26 17:37:12 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/31 13:36:56 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
     Descripcion: busca un carácter específico en una cadena de bytes y 
+    devuelve un puntero a ese carácter.
     Parametros:
         - s: string en el que buscar
         - c: caracter a buscar
         - n: numero de caracteres a buscar
     Retorno: retorna un puntero a la primera ocurrencia de ese carácter, 
     o NULL si el carácter no se encuentra.
-
 */
 #include "libft.h"
 

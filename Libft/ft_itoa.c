@@ -6,7 +6,7 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:24:50 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 14:40:20 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/01/31 13:27:17 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
     Retorno: cadena de caracteres
 
     Diferencia con atoi: atoi convierte una cadena de caracteres a un entero
-    
 */
 
 int	calculate_sign(int n)
