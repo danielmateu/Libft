@@ -6,17 +6,19 @@
 /*   By: damateu- <damateu-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:59:03 by damateu-          #+#    #+#             */
-/*   Updated: 2024/01/23 15:02:41 by damateu-         ###   ########.fr       */
+/*   Updated: 2024/02/02 13:01:26 by damateu-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	Description: Copia n bytes de src a dst
+	Description: 
+		Concatena src a dst y garantiza que dst este terminado en NULL.
 	Parametros:
 		- dst: destino de la copia
 		- src: origen de la copia
 		- n: numero de bytes a copiar
-	Retorno: puntero a dst
+	Retorno: 
+		- La longitud de src
 
 */
 
